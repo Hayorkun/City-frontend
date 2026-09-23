@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 * {
   box-sizing: border-box;
 }
@@ -10,4 +12,9 @@ html {
 
 section[id] {
   scroll-margin-top: 88px;
+}
+
+@theme{
+ --font-heading: "Playfair", serif;
+ --font-body: "Manrope", sans-serif;
 }
