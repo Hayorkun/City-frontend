@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Images from "../assets/Images";
+// import Images from "../assets/Images";
 import BookingBar from "./BookingBar";
 
 const Hero = () => {
@@ -30,7 +30,7 @@ const Hero = () => {
             </div>
             <div className="flex flex-[55%] w-full h-120">
               <img
-                src={Images.Roomview}
+                src="https://res.cloudinary.com/liqslijz/image/upload/f_auto,q_auto,w_1200/Roomview.png"
                 alt="Room view image"
                 className="object-cover w-full h-full object-center"
               />
@@ -42,7 +42,7 @@ const Hero = () => {
         <div
           className="min-h-[calc(100svh-9rem)] w-full"
           style={{
-            backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.90), rgba(0,0,0,0)), url(${Images.Roomview})`,
+            backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.90), rgba(0,0,0,0)), url("https://res.cloudinary.com/liqslijz/image/upload/f_auto,q_auto,w_1200/Roomview.png")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
