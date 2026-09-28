@@ -1,15 +1,19 @@
-import { Route, Routes } from "react-router-dom"
-import LandingPage from "./pages/landingPage"
-import './App.css'
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+
+const LandingPage = lazy(() => import("./pages/landingPage"));
+const RoomAndSuites = lazy(() => import("./pages/RoomAndSuites"));
 
 function App() {
   return (
-    <>
-     <Routes>
-      <Route path="/" element={<LandingPage/>}/>
-     </Routes>
-    </>
-  )
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/rooms-suites" element={<RoomAndSuites />} />
+      </Routes>
+    </Suspense>
+  );
 }
 
-export default App
+export default App;

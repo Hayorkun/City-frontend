@@ -1,6 +1,6 @@
 const BookingBar = () => {
   return (
-    <div className="relative z-10 w-11/12 h-fit p-5 -mt-6 mx-auto bg-white dark:bg-gray-800 shadow-2xl rounded-md md:w-full md:p-6 md:-mt-16">
+    <div className="relative z-10 w-11/12 h-fit p-5 -mt-6 mx-auto bg-white dark:bg-gray-900 shadow-2xl rounded-md md:w-full md:p-6 md:-mt-16">
       <form className="flex flex-col gap-4 md:flex-row md:items-end md:gap-5">
         <label
           htmlFor="checkin"

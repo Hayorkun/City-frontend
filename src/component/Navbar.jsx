@@ -7,26 +7,30 @@ const Navbar = () => {
   const [sideBarOpen, setSideBarOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const navlinks = [
+      {
+      title: "Home",
+      path: "/",
+    },
     {
-      title: "Rooms",
-      path: "/rooms",
+      title: "Rooms & Suites",
+      path: "/rooms-suites",
     },
     {
       title: "Dining",
-      path: "/suite-residence",
+      path: "/dining",
     },
     {
       title: "Experiences",
       path: "/experience",
     },
     {
-      title: "Location",
-      path: "/location",
+      title: "Lounge & Bar",
+      path: "/lounge-bar",
     },
   ];
 
   return (
-    <nav className=" z-30 px-5 md:px-10 py-4 dark:bg-gray-900 dark:text-white bg-white text-black border-b border-gray-300 dark:border-gray-600 sticky top-0">
+    <nav className="z-30 px-5 md:px-10 py-4 dark:bg-gray-900 dark:text-white bg-white text-black border-b border-gray-300 dark:border-gray-900 sticky -top-1">
       <div className="flex items-center justify-between max-w-360 mx-auto">
         <div className="flex gap-2">
         <h1 className="font-heading font-bold text-2xl md:text-3xl">
@@ -39,12 +43,12 @@ const Navbar = () => {
         <ul className="flex gap-5">
           {navlinks.map((n) => (
             <li key={n.path}>
-              <NavLink
-                to={n.path}
+              <a
+                href={n.path}
                 className="font-body font-medium leading-relaxed text-sm hover:bg-[#B5935B] hover:text-[#f9f8f6] py-1.5 px-2.5 rounded-md transition-all ease-linear duration-200"
               >
                 {n.title}
-              </NavLink>
+              </a>
             </li>
           ))}
         </ul>
@@ -91,13 +95,13 @@ const Navbar = () => {
               <ul className="flex flex-col gap-2">
                 {navlinks.map((n) => (
                   <li key={n.path} className="w-full border-b border-gray-200 dark:border-gray-700">
-                    <NavLink
-                      to={n.path}
+                    <a
+                      href={n.path}
                       onClick={() => setSideBarOpen(false)}
                       className="block w-full rounded-md px-3 py-3 font-body font-medium transition-colors ease-linear duration-200 hover:bg-[#B5935B] hover:text-white"
                     >
                       {n.title}
-                    </NavLink>
+                    </a>
                   </li>
                 ))}
               </ul>
