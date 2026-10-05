@@ -30,13 +30,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="z-30 px-5 md:px-10 py-4 dark:bg-gray-900 dark:text-white bg-white text-black border-b border-gray-300 dark:border-gray-900 sticky -top-1">
+    <nav className="z-30 px-5 md:px-10 py-4 dark:bg-gray-900 dark:text-white bg-white text-black border-b border-gray-300 dark:border-gray-700 sticky -top-1">
       <div className="flex items-center justify-between max-w-360 mx-auto">
         <div className="flex gap-2">
-        <h1 className="font-heading font-bold text-2xl md:text-3xl">
+        <a href="/">
+          <h1 className="font-heading font-bold text-2xl md:text-3xl">
           City
           <span className="text-[#B5935B] text-xl font-extrabold">Lounge</span>
         </h1>
+        </a>
       </div>
 
       <div className="hidden md:flex items-center gap-5">
